@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-soursz-dark text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tighter;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl leading-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-2.5 font-medium rounded-full transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-soursz-neon text-soursz-dark hover:shadow-neon-sm;
+  }
+
+  .btn-outline {
+    @apply btn border border-soursz-neon text-soursz-neon hover:bg-soursz-neon/10;
+  }
+
+  .btn-dark {
+    @apply btn bg-soursz-dark-600 text-white hover:bg-soursz-dark-700;
+  }
+
+  .card {
+    @apply bg-soursz-dark-800 rounded-2xl overflow-hidden;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:bg-soursz-dark-700 hover:translate-y-[-4px];
+  }
+
+  .glass-card {
+    @apply bg-soursz-dark-800/80 backdrop-blur-sm border border-soursz-gray/10 rounded-2xl;
+  }
+
+  .section {
+    @apply py-12 md:py-20;
+  }
+
+  .section-title {
+    @apply mb-10 text-center;
+  }
+
+  .input {
+    @apply w-full px-4 py-2.5 bg-soursz-dark-600 border border-soursz-gray/20 rounded-lg focus:outline-none focus:border-soursz-neon;
+  }
+}
+
+.neon-text {
+  text-shadow: 0 0 5px theme('colors.soursz.neon'), 0 0 20px theme('colors.soursz.neon');
+}
+
+.neon-glow {
+  box-shadow: 0 0 5px theme('colors.soursz.neon'), 0 0 20px theme('colors.soursz.neon');
+}
+
+.neon-border {
+  border-color: theme('colors.soursz.neon');
+  box-shadow: 0 0 5px theme('colors.soursz.neon');
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.link-neon {
+  @apply text-soursz-neon relative;
+}
+
+.link-neon::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-soursz-neon transition-all duration-300;
+}
+
+.link-neon:hover::after {
+  @apply w-full;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.pulse-soft {
+  animation: pulse-soft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
