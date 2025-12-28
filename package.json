@@ -2,6 +2,7 @@
   "name": "soursz-music-promotion",
   "private": true,
   "version": "0.1.0",
+  "homepage": "https://github.com/Med-Almdn/soursz-music",
   "type": "module",
   "scripts": {
     "dev": "vite",
