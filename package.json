@@ -2,13 +2,16 @@
   "name": "soursz-music-promotion",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://github.com/Med-Almdn/soursz-music",
+  "homepage": "https://Med-Almdn.github.io/soursz-music",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
