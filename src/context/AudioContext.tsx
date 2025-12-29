@@ -19,7 +19,7 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const el = new Audio('/audio/ambient.mp3');
+    const el = new Audio('https://drive.google.com/file/d/1UVyfbNY7gzWJU0kkfwplAVeMlxf6ThMz/view?usp=drive_link');
     el.loop = true;
     el.preload = 'metadata';
     el.volume = 0.15;

@@ -83,7 +83,7 @@ const HeroSection: React.FC = () => {
           loop
           playsInline
         >
-          <source src="/videos/Hero.mp4" type="video/mp4" />
+          <source src="https://drive.google.com/file/d/15sDFP_J6vR-4ZVIyCDvPllnRJ84QDSco/view?usp=drive_link" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/30" />
