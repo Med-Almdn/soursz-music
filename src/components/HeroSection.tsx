@@ -101,7 +101,7 @@ const HeroSection: React.FC = () => {
           className="absolute inset-0 opacity-[0.06]"
           style={{
             backgroundImage:
-              'linear-gradient(to right, rgba(255,255,255,0.35) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.35) 1px, transparent 1px)',
+              'linear-gradient(to right, rgba(255,255,255,0.35) 1px, transpare  nt 1px), linear-gradient(to bottom, rgba(255,255,255,0.35) 1px, transparent 1px)',
             backgroundSize: '64px 64px',
           }}
           animate={reduceMotion ? {} : { backgroundPosition: ['0px 0px', '64px 64px'] }}
