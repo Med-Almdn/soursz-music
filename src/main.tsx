@@ -9,7 +9,7 @@ import { AudioProvider } from './context/AudioContext';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AudioProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/soursz-music">        
         <App />
       </BrowserRouter>
     </AudioProvider>

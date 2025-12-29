@@ -1,15 +1,14 @@
 {
-  "name": "soursz-music",
+  "name": "soursz-music-promotion",
+  "private": true,
   "version": "0.1.0",
-  "homepage": "https://med-almdn.github.io/soursz-music",
+  "homepage": "https://Med-Almdn.github.io/soursz-music",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -17,6 +16,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "framer-motion": "^11.0.8",
+    "gh-pages": "^6.3.0",
     "jsonwebtoken": "^9.0.3",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
@@ -37,7 +37,6 @@
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
-    "gh-pages": "^6.3.0",
     "globals": "^15.9.0",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
