@@ -3,25 +3,44 @@ import { motion, useReducedMotion } from 'framer-motion';
 
 type Brand = { name: string; src: string; href?: string };
 
+// const brands: Brand[] = [
+//   { name: 'Universal Music Group', 
+//     src: 'Logos/Universal.png' },
+//   {
+//     name: 'Sony Music',
+//     src: 'Logos/Sony.png'  },
+//   {
+//     name: 'Warner Music Group',
+//     src: 'Logos/Warner.png'  },
+//   {
+//     name: 'Atlantic',
+//     src: 'Logos/Atlantic.png'  },
+// ];
+
 const brands: Brand[] = [
-  { name: 'Universal Music Group', 
-    src: 'Logos/Universal.png' },
+  {
+    name: 'Universal Music Group',
+    src: `${import.meta.env.BASE_URL}Logos/Universal.png`,
+  },
   {
     name: 'Sony Music',
-    src: 'Logos/Sony.png'  },
+    src: `${import.meta.env.BASE_URL}Logos/Sony.png`,
+  },
   {
     name: 'Warner Music Group',
-    src: 'Logos/Warner.png'  },
+    src: `${import.meta.env.BASE_URL}Logos/Warner.png`,
+  },
   {
     name: 'Atlantic',
-    src: 'Logos/Atlantic.png'  },
+    src: `${import.meta.env.BASE_URL}Logos/Atlantic.png`,
+  },
 ];
+
 
 const FeaturedBrands = () => {
   const [paused, setPaused] = useState(false);
   const reduceMotion = useReducedMotion();
 
-  // Duplicate ONCE for a seamless loop: animate from 0% to -50%
   const loopBrands = useMemo(() => [...brands, ...brands], []);
 
   const duration = 22;
